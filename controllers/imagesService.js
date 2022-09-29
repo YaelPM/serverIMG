@@ -47,6 +47,7 @@ const getImages = async (req, res) => {
     console.log(iduser)
 
     await imageDAO.getImages(iduser, (data) => {
+        console.log(data)
         try {
             if (!data) throw new Err("No hay imagenes de cargados por el usuario")
 
